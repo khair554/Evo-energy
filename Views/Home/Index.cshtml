@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/home2.5.css">
+    <title>Home Page</title>
+</head>
+<body>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" aria-label="Image Carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://capelectrique.com/"><img src="~/css/cap electrique.png" alt="Cap Electrique" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.solar-power-company.com/"><img src="~/css/solarpower.jpg" alt="Solar Power" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="http://www.volt-energy.tn/En/home"><img src="~/css/volta.jpg" alt="Volt Energy" class="d-block w-100"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.soteca-electric.com/"><img src="~/css/soteca.jpg" alt="Soteca" class="d-block w-100"></a>
+            </div>
+        </div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Previous Slide">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="Next Slide">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="MID">
+        <h1>Les meilleurs entreprises pour chaque gouvernorat</h1>
+        <iframe title="Top Companies by Governorate" width="1800" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiMDY4NzMyZjItOGEwNy00NDRiLWIyYjgtZGMwZTM0MzNlZDI0IiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowfullscreen="true"></iframe>
+    </div>
+
+    <section class="div2">
+        <div class="html">
+            <h1>Le coût d'investissement dure les années.</h1>
+            <iframe title="Investment Cost Over Years" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZjE3MTA4MWYtYzBhNi00ZDZmLTg3YjktNTFjZWQyYjNkOWMxIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+        <div class="containerapp">
+            <div class="contentapp">
+                <h1>Découvrez notre application</h1>
+                <p>Faites un tour rapide des principales fonctionnalités de l'application</p>
+                <p>Connectez-vous à notre hub numérique. Accédez à notre application en ligne, personnalisez votre profil, activez les notifications et mettez vos entreprises et produits préférés, et rendez votre utilisation de notre application plus facile.</p>
+            </div>
+            <div class="phone-container">
+                <img src="~/css/sinscrire.png" alt="Application Demo" class="phone-image">
+                <a href="path/to/your/application.apk" class="button-29">Télécharger maintenant</a>
+            </div>
+        </div>
+       
+        <div class="carousel-container3">
+            <h1>Bon plans:</h1>
+            <button class="carousel-button left" id="prevBtn">&lt;</button>
+            <div class="carousel3" id="carousel3">
+                <div class="carousel-item3">
+                    
+                    <img src="~/css/1.jfif" alt="Kit solaire de pompage immergé SHURFLO">
+                    <div class="price">159TND</div>
+                    <div class="description">Kit solaire de pompage immergé SHURFLO</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/2.jpg" alt="Kit panneau solaire Camping-car MPPT monocristallin 410W">
+                    <div class="promo">PROMO!</div>
+                    <div class="price">2100TND</div>
+                    <div class="description">Kit panneau solaire Camping-car MPPT monocristallin 410W</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/3.jpg" alt="Kit solaire autonome 410W - Plomb Gel - Onduleur 800VA">
+                    <div class="price">599TND</div>
+                    <div class="description">Kit solaire autonome 410W - Plomb Gel - Onduleur 800VA</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/4.jfif" alt="Kit pompage solaire immergé goutte à goutte sans pression 100m²">
+                    <div class="price">899TND</div>
+                    <div class="description">Kit pompage solaire immergé goutte à goutte sans pression 100m²</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/5.jfif" alt="Surpresseur 24 Litres équipé SHURFLO 12V">
+                    <div class="price">1359TND</div>
+                    <div class="description">Surpresseur 24 Litres équipé SHURFLO 12V</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/6.jfif" alt="Batterie lithium Compact ULTIMATRON LiFePO4 Smart BMS 12V / 100Ah">
+                    <div class="price">1199TND</div>
+                    <div class="description">Batterie lithium Compact ULTIMATRON LiFePO4 Smart BMS 12V / 100Ah</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+                <div class="carousel-item3">
+                    <img src="~/css/7.jfif" alt="Kit solaire Camping-car MPPT monocristallin VICTRON 115W">
+                    <div class="price">1799TND</div>
+                    <div class="description">Kit solaire Camping-car MPPT monocristallin VICTRON 115W</div>
+                    <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="link">                   <button class="details-button">Détails</button></a>
+                </div>
+            </div>
+            <button class="carousel-button right" id="nextBtn">&gt;</button>
+        </div>
+        <div class="reviews-header">
+            <div class="reviews-title">
+                <span class="title-highlight">Avis Vérifiés</span> 4.8 / 5 <span class="stars">★★★★★</span>
+            </div>
+            <div class="reviews-link">
+                <a href="#">21 avis déposés les 3 derniers mois</a>
+            </div>
+        </div>
+        <div class="reviews-container">
+            <div class="review-card">
+                <p class="review-date">Le <strong>18 Mai 2024</strong> par <strong>Khairy H.</strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text">"VOLTA"" PV Leur expertise en photovoltaïque est ouf. Grâce à leurs conseils, on a pu réduire nos coûts énergétiques de ouf. Un servic</p>
+            </div>
+            <div class="review-card">
+                <p class="review-date">Le <strong>29 Mai 2024</strong> par <strong>Thierry M.</strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text">"SPECTRA" Leur équipe de consultants a bien pigé nos besoins et nous a proposé des solutions personnalisées. Les panneaux solaires qu'ils nous ont conseillés sont top et nous font économiser un max sur la facture d'électricité. Je te les recommande grave.</p>
+            </div>
+            <div class="review-card">
+                <p class="review-date">Le <strong>29 Mai 2024</strong> par <strong>Sylvain C.</strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text"> Un service client au top et une expertise technique de ouf. On a été guidés comme des bébés pour l'installation de nos panneaux solaires. Les mecs sont hyper réactifs et dispo pour répondre à toutes nos questions. Une expérience vraiment cool</p>
+            </div>
+            <div class="review-card">
+                <p class="review-date">Le <strong>26 Mai 2024</strong> par <strong>Jean-Christophe T.</strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text">Je suis très satisfait et j'ai eu de très bons conseils techniques pour mon installation.</p>
+            </div>
+            <div class="review-card">
+                <p class="review-date">Le <strong>26 Mai 2024</strong> par <strong></strong></p>
+                <p class="review-rating">2/5 <span class="stars">★★</span></p>
+                <p class="review-text">"GAMCO"" Support technique insuffisant pour résoudre nos problèmest</p>
+            </div>
+            <div class="review-card">
+                <p class="review-date">Le <strong>26 Mai 2024</strong> par <strong></strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text">Bon matériel et livr satisfait</p>
+            </div>
+           
+            
+            
+            <div class="review-card">
+                <p class="review-date">Le <strong>26 Mai 2024</strong> par <strong></strong></p>
+                <p class="review-rating">5/5 <span class="stars">★★★★★</span></p>
+                <p class="review-text">Bon matériel et livr satisfait</p>
+            </div>
+        </div>
+        <div class="read-more">
+            <button>Lire les avis</button>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">Contactez-nous</h1>
+        <div class="row">
+            <form action="">
+                <input type="text" placeholder="Nom et prénom" class="box" />
+                <input type="email" placeholder="Email" class="box" />
+                <input type="number" placeholder="Numéro" class="box" />
+                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="Écrire ici!"></textarea>
+                <input type="submit" class="btn" value="Envoyer" />
+            </form>
+            <div class="image">
+                <img src="~/css/tec.png" alt="Contact Image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Liens rapides</h3>
+                <a href="#home">Profil</a>
+                <a href="#home">Entreprise</a>
+                <a href="#home">Produits</a>
+                <a href="#home">À propos</a>
+            </div>
+            <div class="box">
+                <h3>Réseaux sociaux</h3>
+                <a href="https://www.facebook.com/search/top?q=c.a.p%20%C3%A9lectrique">Facebook</a>
+                <a href="#WhoAreWe?">Instagram</a>
+                <a href="#about">LinkedIn</a>
+            </div>
+            <div class="box">
+                <h3>Contact info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Mahdia, Tunisia</p>
+                <p><i class="fas fa-envelope"></i> evo-energy@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +216 46 348 482 </p>
+            </div>
+        </div>
+        <h1 class="credit">
+            Créé par <a>Khaireddine Hattour</a> - Tous droits réservés.
+        </h1>
+    </div>
+    
+    </div>
+    <style>
+        .carousel-container3 .h1{
+            font-family:serif;
+        }
+        .carousel-container3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel3 {
+            display: flex;
+            overflow-x: auto;
+            width: 80%;
+            padding: 20px;
+            gap: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-item3 {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-width: 200px;
+            max-width: 200px;
+            text-align: center;
+            position: relative;
+        }
+
+            .carousel-item3 img {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+
+        .price {
+            font-size: 1.5em;
+            color: #007BFF;
+            margin: 10px 0;
+        }
+
+        .description {
+            font-size: 1em;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .details-button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .details-button:hover {
+                background: #0056b3;
+            }
+
+        .promo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: orange;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+            .carousel-button.left {
+                left: 0;
+            }
+
+            .carousel-button.right {
+                right: 0;
+            }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('carousel3');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({
+                    left: -200,
+                    behavior: 'smooth'
+                });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({
+                    left: 200,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/home2.js"></script>
+
+</body>
+</html>

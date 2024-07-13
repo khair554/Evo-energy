@@ -1,0 +1,229 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+   
+}
+
+.link:hover, .active {
+    border-bottom: 2px solid #fff;
+}
+
+.btn:hover {
+    background: rgb(13, 103, 231);
+}
+
+#registerBtn {
+    margin-left: 15px;
+}
+
+.btn.white-btn {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.btn.white-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.form-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+    z-index: 2;
+}
+
+.register-container {
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    height: 10000;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.top span {
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .top span a {
+        font-weight: 500;
+        color: #fff;
+        margin-left: 5px;
+    }
+
+header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.two-forms {
+    display: flex;
+    gap: 10px;
+}
+
+.input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+    justify-content: space-between;
+}
+
+    .input-field:hover, .input-field:focus {
+        background: rgba(15, 6, 142, 0.25);
+    }
+
+::-webkit-input-placeholder {
+    color: #0818f6;
+}
+
+.input-box i {
+    position: relative;
+    top: -35px;
+    left: 17px;
+    color: #fff;
+}
+
+.submit {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(10, 35, 197);
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+    .submit:hover {
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    }
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+
+    .two-col .one {
+        display: flex;
+        gap: 5px;
+    }
+
+.two label a {
+    text-decoration: none;
+    color: #fff;
+}
+
+    .two label a:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+.input-box label { /*select*/
+    color: #0862e9;
+    margin-bottom: 5px;
+}
+
+.input-box select {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #0049e6;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+    margin-bottom: 20px;
+}
+
+
+    .input-box select:hover,
+    .input-box select:focus {
+        background: rgb(127, 154, 211);
+    }
+
+.input-box label { /*goubernourat*/
+    color: #fbfbfb;
+    margin-bottom: 5px;
+}
+
+.input-box input[type="url"],
+.input-box input[type="tel"] {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+    margin-top: 25px;
+}
+
+    .input-box input[type="url"]:hover,
+    .input-box input[type="tel"]:hover,
+    .input-box input[type="url"]:focus,
+    .input-box input[type="tel"]:focus {
+        background: rgba(15, 6, 142, 0.25);
+    }
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}

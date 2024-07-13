@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/detailentre1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+</head>
+<body>
+    <header>
+        <h1 id="company-name">Cap électrique</h1>
+    </header>
+    <main>
+        <div class="company-details">
+            <img src="~/css/cap electrique.png" alt="Company Logo">
+            <div class="company-info">
+                <p id="company-description">Déscription:</p>
+                <p><strong>Nom d'entreprise:</strong> <span id="Nom">Cap Electrique</span></p>
+                <p><strong>Address:</strong> <span id="company-address">1400 rue salakta mahdia</span></p>
+                <p><strong>Phone:</strong> <span id="company-phone">54516196</span></p>
+                <p><strong>Phone 2:</strong> <span id="company-phone2">59616159</span></p>
+                <p><strong>Champ matricule:</strong> <span id="matricule">ip 49465</span></p>
+                <p><strong>Email:</strong> <span id="company-email">Cap electrique@gmail.com</span></p>
+                <p><strong>Siteweb:</strong> <a id="company-website" href="https://capelectrique.com/">https://capelectrique.com/</a></p>
+                <p><strong>Facebook:</strong> <a id="facebook" href="https://capelectrique.com/">https://capelectrique.com/</a></p>
+                <p><strong>Instagram:</strong> <a id="instagram" href="https://www.instagram.com/capelectrique.tn">https://www.instagram.com/capelectrique.tn</a></p>
+                <p><strong>Gouvernorat:</strong> <span id="company-location">mahdia</span></p>
+                <p><strong>Services:</strong> <span id="services">Ingénierie et conseil,Installation des systèmes photovoltaïques,Entretien et maintenance</span></p>
+            </div>
+            <div class="product-details">
+                <table>
+                    <tr>
+                        <th>Produits</th>
+                        <th>Modèles des produits</th>
+                    </tr>
+                    <tr>
+                        <td>Panneux photovoltaique</td>
+                        <td id="product-panel">SP-300W, SX-500W, SX-300W</td>
+                    </tr>
+                    <tr>
+                        <td>Ondileur</td>
+                        <td id="product-inverter">INV-5000,</td>
+                    </tr>
+                    <tr>
+                        <td>Micro-ondileur</td>
+                        <td id="product-micro-inverter">MI-500</td>
+                    </tr>
+                    <tr>
+                        <td>Lampe solaire</td>
+                        <td id="product-lamp">SL-50W</td>
+                    </tr>
+                    <tr>
+                        <td>Batterie</td>
+                        <td id="product-battery">BAT-200Ah, BAT-150Ah, 3K Thomson-200ah, </td>
+                    </tr>
+                    <tr>
+                        <td>Coffret</td>
+                        <td id="product-storage">SB-100</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Evo-énergy. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Populate the details page with data from URL parameters
+        document.getElementById('company-name').innerText = getUrlParameter('name') || 'Cap électrique';
+        document.getElementById('company-description').innerText = getUrlParameter('description') || 'Déscription';
+        document.getElementById('company-address').innerText = getUrlParameter('address') || '1400 rue salakta mahdia';
+        document.getElementById('company-phone').innerText = getUrlParameter('phone') || '54516196';
+        document.getElementById('company-phone2').innerText = getUrlParameter('phone2') || '59616159';
+        document.getElementById('matricule').innerText = getUrlParameter('matricule') || 'ip 49465';
+        document.getElementById('company-email').innerText = getUrlParameter('email') || 'Cap electrique@gmail.com';
+        document.getElementById('company-website').innerText = getUrlParameter('website') || 'https://capelectrique.com/';
+        document.getElementById('company-website').href = getUrlParameter('website') || 'https://capelectrique.com/';
+        document.getElementById('facebook').innerText = getUrlParameter('facebook') || 'https://capelectrique.com/';
+        document.getElementById('facebook').href = getUrlParameter('facebook') || 'https://capelectrique.com/';
+        document.getElementById('instagram').innerText = getUrlParameter('instagram') || 'https://www.instagram.com/capelectrique.tn';
+        document.getElementById('instagram').href = getUrlParameter('instagram') || 'https://www.instagram.com/capelectrique.tn';
+        document.getElementById('company-location').innerText = getUrlParameter('location') || 'mahdia';
+        document.getElementById('company-logo').src = getUrlParameter('logo') || 'cap electrique.png';
+    </script>
+</body>
+</html>

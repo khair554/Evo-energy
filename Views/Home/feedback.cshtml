@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/feddback.css"/>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div class="container">
+        <form class="feedback-form">
+            <h2>Donner feedback</h2>
+            <input type="text" name="name" placeholder="Nom" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="feedback" placeholder="Dites-nous ce que vous pensez" required></textarea>
+            <div class="rating">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+            <button type="submit">Confimer</button>
+        </form>
+    </div>
+</body>
+<footer>
+    <p>&copy; 2024 Evo-énergy. Tous droits réservés.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const stars = document.querySelectorAll('.rating span');
+        const ratingValue = document.getElementById('ratingValue');
+        const feedbackForm = document.getElementById('feedbackForm');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                ratingValue.value = star.getAttribute('data-value');
+                stars.forEach(s => s.classList.remove('selected'));
+                star.classList.add('selected');
+                star.previousElementSibling?.classList.add('selected');
+                star.nextElementSibling?.classList.remove('selected');
+            });
+        });
+
+        feedbackForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+            const rating = ratingValue.value;
+
+            alert(`Name: ${name}\nEmail: ${email}\nFeedback: ${feedback}\nRating: ${rating}`);
+        });
+    });</script>
+</html>

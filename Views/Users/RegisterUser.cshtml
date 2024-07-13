@@ -1,0 +1,192 @@
+﻿@model webdev_consultationPhotovoltaique.Models.photovoltaiqueDB.User
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="~/css/registeruser1.css">
+    <title>Ludiflex | Energy</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="form-box">
+            <div class="register2-container" id="register2">
+                <div class="top">
+                    <header>S'inscrire</header>
+                    
+                </div>
+                <form asp-action="Create" method="post">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+               
+                      
+                    <div class="input-box">
+                        <input asp-for="Nom" class="input-field" placeholder="Nom" />
+                        <span asp-validation-for="Nom" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                       
+                        <input asp-for="Prénom" class="input-field" placeholder="Prénom" />
+                        <span asp-validation-for="Prénom" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        
+                        <input asp-for="Adresse" class="input-field" placeholder="Adresse" />
+                        <span asp-validation-for="Adresse" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                      
+                        <input asp-for="Télephone" class="input-field" placeholder="Télephone" />
+                        <span asp-validation-for="Télephone" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                       
+                        <select asp-for="Gouvernourat" class="input-field">
+                            <option value="">Selectionner Gouvernorat</option>
+                            <option value="Bizerte">Bizerte</option>
+                            <option value="Gabés">Gabés</option>
+                            <option value="Gafsa">Gafsa</option>
+                            <option value="Jendouba">Jendouba</option>
+                            <option value="Kairouan">Kairouan</option>
+                            <option value="Kasserine">Kasserine</option>
+                            <option value="Kébili">Kébili</option>
+                            <option value="Kef">Kef</option>
+                            <option value="Mahdia">Mahdia</option>
+                            <option value="Manouba">Manouba</option>
+                            <option value="Médenine">Médenine</option>
+                            <option value="Mounastir">Mounastir</option>
+                            <option value="Nabeul">Nabeul</option>
+                            <option value="Sfax">Sfax</option>
+                            <option value="Sidi Bouzid">Sidi Bouzid</option>
+                            <option value="Siliana">Siliana</option>
+                            <option value="Sousse">Sousse</option>
+                            <option value="Tataouine">Tataouine</option>
+                            <option value="Tozeur">Tozeur</option>
+                            <option value="Tunis">Tunis</option>
+                            <option value="Zaghouan">Zaghouan</option>
+                            <option value="Ben arous">Ben arous</option>
+                        </select>
+
+
+                        <span asp-validation-for="Gouvernourat" class="text-danger"></span>
+
+                    </div>
+                    <div class="input-box">
+                       
+                        <input asp-for="Email" class="input-field" placeholder="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                      
+                        <input asp-for="MotDePasse"  class="input-field" placeholder="Mot de Passe" />
+                        <span asp-validation-for="MotDePasse" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="Registrer" class="submit" />
+                    </div>
+                </form>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <a href="@Url.Action("termes","Home")" class="link">Terms & conditions</a></li>
+                    </div>
+                </div>
+              
+                <span><a href="@Url.Action("RegisterEntreprise", "Entreprises")" class="link ">S'inscrire en tant qu'entreprise</a></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*document.addEventListener('DOMContentLoaded', () => {
+            const registerForm = document.querySelector('.register-container');
+            const registerButton = document.querySelector('.submit');
+            const rememberMeCheckbox = document.getElementById('register-check');
+            const inputs = document.querySelectorAll('.input-field');
+
+            registerButton.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default form submission
+
+                let isValid = true;
+
+                // Simple validation for each input field
+                inputs.forEach(input => {
+                    if (input.value.trim() === '') {
+                        isValid = false;
+                        input.classList.add('error');
+                    } else {
+                        input.classList.remove('error');
+                    }
+                });
+
+                if (isValid) {
+                    // Collect form data
+                    const formData = {};
+                    inputs.forEach(input => {
+                        formData[input.placeholder] = input.value.trim();
+                    });
+
+                    saveFormData(formData);
+
+                    // Here you can handle the form data, for example, send it to a server
+                    console.log('Form Data:', formData);
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            function saveFormData(formData) {
+                // Handle Remember Me functionality
+                if (rememberMeCheckbox.checked) {
+                    localStorage.setItem('rememberMe', true);
+                    localStorage.setItem('userData', JSON.stringify(formData));
+                } else {
+                    localStorage.removeItem('rememberMe');
+                    localStorage.removeItem('userData');
+                }
+            }
+
+            // Optional: Add event listeners for input fields to remove error class on input
+            inputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    if (input.value.trim() !== '') {
+                        input.classList.remove('error');
+                    }
+                });
+            });
+
+            // Load saved user data if Remember Me was checked
+            if (localStorage.getItem('rememberMe')) {
+                const savedData = JSON.parse(localStorage.getItem('userData'));
+                inputs.forEach(input => {
+                    input.value = savedData[input.placeholder] || '';
+                });
+                rememberMeCheckbox.checked = true;
+            }
+
+            // Placeholder function for registering as an enterprise
+            window.register2 = function () {
+                // You can add functionality here to switch to another registration form
+                alert('Switch to enterprise registration form');
+            };
+        });*/
+
+    </script>
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+</body>
+</html>

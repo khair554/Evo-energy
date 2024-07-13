@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil de l'entreprise</title>
+    <link rel="stylesheet" href="~/css/profil1.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="header">
+            <img src="~/css/volta.jpg" alt="Logo de l'entreprise" class="company-logo">
+            <h1>Volta-électrique</h1>
+        </div>
+        <div class="products-section">
+            <h2>Produits ajoutés</h2>
+            <div class="product">
+                <span class="product-name">Onduleur Hybride 5kW</span>
+                <div class="product-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+            <div class="product">
+                <span class="product-name">Micro-Onduleur 600W</span>
+                <div class="product-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+            <div class="product">
+                <span class="product-name">Onduleur de Réseau Triphasé 10kW</span>
+                <div class="product-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <div class="services-section">
+            <h2>Services ajoutés</h2>
+            <div class="service">
+                <span class="service-name">installation des system photovoltaique</span>
+                <div class="service-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+            <div class="service">
+                <span class="service-name">Entretien et maintenace</span>
+                <div class="service-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+            <div class="service">
+                <span class="service-name">Ingénierie et conseil</span>
+                <div class="service-actions">
+                    <button class="btn modify">Modifier</button>
+                    <button class="btn delete">Supprimer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .profile-container {
+        width: 90%;
+        max-width: 800px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .company-logo {
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .products-section, .services-section {
+        margin-top: 20px;
+    }
+
+        .products-section h2, .services-section h2 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+    .product, .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .product-name, .service-name {
+        font-size: 18px;
+        color: #666;
+    }
+
+    .product-actions, .service-actions {
+        display: flex;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .modify {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+        .modify:hover {
+            background-color: #45a049;
+        }
+
+    .delete {
+        background-color: #f44336;
+        color: white;
+    }
+
+        .delete:hover {
+            background-color: #e53935;
+        }
+</style>
+</html>

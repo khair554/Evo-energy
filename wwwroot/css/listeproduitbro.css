@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.product-list .product-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    .product-list .product-block .product-item {
+        background-color: #eee;
+        width: calc(20% - 20px); /* Adjust based on desired size */
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .product-list .product-block .product-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .product-list .product-block .product-item .product-info {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        }
+
+        .product-list .product-block .product-item .product-name, .product-description {
+            margin: 5px 0;
+        }
+
+        .product-list .product-block .product-item .detail-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+            .product-list .product-block .product-item .detail-button:hover {
+                background-color: #0056b3;
+            }
+
+.container {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+    .category img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .category p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .category:hover {
+        transform: scale(1.1);
+    }
+
+.product-list {
+    display: none;
+    margin-top: 20px;
+}
+
+    .product-list ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .product-list li {
+        background-color: #eee;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    footer p {
+        margin: 0;
+    }

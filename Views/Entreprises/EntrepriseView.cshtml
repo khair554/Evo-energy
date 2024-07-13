@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprises</title>
+    <link rel="stylesheet" href="~/css/liste entreprise1.css">
+</head>
+<body>
+    <header>
+        <h1>Liste des entreprises</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Rechercher..." id="searchInput">
+            <button onclick="searchCompanies()">Rechercher</button>
+        </div>
+    </header>
+    <main>
+        <div class="entreprise">
+            <a href="@Url.Action("DETAILENTREPRISE", "Entreprises")" class="clickable-div">
+                <img src="~/css/cap electrique.png" alt="Company 1">
+                <h2>Cap électrique</h2>
+                <p>Mahdia</p>
+            </a>
+        </div>
+        <div class="entreprise">
+            <img src="~/css/volta.jpg" alt="Company 2">
+            <h2>Volta VP</h2>
+            <p>Tunis.</p>
+        </div>
+        <div class="entreprise">
+            <img src="~/css/solarpower.jpg" alt="Company 3">
+            <h2>Solar power</h2>
+            <p>Monastir.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Evo-énergy. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function searchCompanies() {
+            // Get input value
+            var input = document.getElementById("searchInput").value.toUpperCase();
+            // Get all entreprise divs
+            var entreprises = document.getElementsByClassName("entreprise");
+
+            // Loop through all entreprise divs
+            for (var i = 0; i < entreprises.length; i++) {
+                var h2 = entreprises[i].getElementsByTagName("h2")[0];
+                var txtValue = h2.textContent || h2.innerText;
+
+                // Check if the text content matches the search input
+                if (txtValue.toUpperCase().indexOf(input) > -1) {
+                    entreprises[i].style.display = "";
+                } else {
+                    entreprises[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

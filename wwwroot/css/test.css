@@ -1,0 +1,102 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure the navbar starts from the left edge */
+    right: 0; /* Ensure the navbar ends at the right edge */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    height: 80px; /* Adjust height as needed */
+    background: linear-gradient(rgba(12, 83, 196, 0.6), transparent);
+    z-index: 100;
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+.nav-logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+    .nav-menu ul li {
+        list-style-type: none;
+    }
+
+        .nav-menu ul li .link {
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+            margin: 0 25px;
+            padding-bottom: 15px;
+        }
+
+.link:hover, .active {
+    border-bottom: 2px solid #fff;
+}
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-left: 10px; /* Add margin to create a gap */
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu-btn {
+    display: none; /* Hide the menu button by default */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide the menu by default on small screens */
+        flex-direction: column;
+        width: 100%;
+        background: rgba(12, 83, 196, 0.9);
+        position: absolute;
+        top: 80px; /* Position below the navbar */
+        left: 0;
+    }
+
+        .nav-menu.responsive {
+            display: flex; /* Show the menu when responsive class is added */
+        }
+
+        .nav-menu ul {
+            flex-direction: column;
+            width: 50%;
+        }
+
+            .nav-menu ul li {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+    .nav-button {
+        display: none; /* Hide the buttons on small screens */
+    }
+
+    .nav-menu-btn {
+        display: block; /* Show the menu button on small screens */
+    }
+}

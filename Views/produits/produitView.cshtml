@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélection de produits</title>
+    <link rel="stylesheet" href="~/css/PRODUITt.css" asp-append-version="true" />
+</head>
+
+<body>
+    <video class="video-bg" autoplay muted loop>
+        <source src="~/css/backgroundv.mov" type="video/mp4">
+    </video>
+
+    <div class="wrapper">
+        <form id="product-form">
+            <div>
+                <h2>Ajouter des produits</h2>
+            </div>
+            <br>
+            <label for="product-type">Type de produit :</label>
+            <select id="product-type" name="product-type">
+                <option value="">Sélectionnez un type</option>
+                <option value="panneaux_photovoltaiques">Panneaux photovoltaïques</option>
+                <option value="onduleurs">Onduleurs</option>
+                <option value="micro_onduleurs">Micro-onduleurs</option>
+                <option value="coffrets">Coffrets</option>
+                <option value="lampes_solaires">Lampes Solaires</option>
+                <option value="batteries">Batteries</option>
+            </select>
+
+            <label for="product-name">Model du produit :</label>
+            <select id="product-name" name="product-name" disabled>
+                <option value="">Sélectionnez un type de produit d'abord</option>
+                <option value="">Sélectionnez un type</option>
+                <option value="panneaux_photovoltaiques">Panneaux photovoltaïques</option>
+                <option value="onduleurs">Onduleurs</option>
+                <option value="micro_onduleurs">Micro-onduleurs</option>
+                <option value="coffrets">Coffrets</option>
+                <option value="lampes_solaires">Lampes Solaires</option>
+                <option value="batteries">Batteries</option>
+            </select>
+
+            <label for="product-description">Description :</label>
+            <textarea id="product-description" name="product-description"></textarea>
+
+            <label for="product-logo">Image :</label>
+            <input type="file" id="product-logo" name="product-logo">
+
+            <input type="submit" value="Confirmer">
+        </form>
+    </div>
+    
+    <script src="~/js/produit.js"> </script>
+</body>
+</html>

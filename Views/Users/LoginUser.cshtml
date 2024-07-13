@@ -1,0 +1,60 @@
+﻿@model webdev_consultationPhotovoltaique.Models.photovoltaiqueDB.User
+
+@{
+    ViewData["Title"] = "LoginUser";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/connexion3.css">
+    <title>Ludiflex | Energy</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box">
+            <div class="register2-container" id="register2">
+                <div class="top">
+                    <header>Connexion</header>
+                </div>
+                <form asp-action="LoginUser" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="input-box">
+                        <input asp-for="Email" class="input-field" placeholder="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="input-box">
+                        <input asp-for="MotDePasse" class="input-field" placeholder="Mot de Passe" />
+                        <span asp-validation-for="MotDePasse" class="text-danger"></span>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="submit" value="Connexion" class="submit" />
+                    </div>
+                </form>
+
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <a href="@Url.Action("termes","Home")" class="link">Terms & conditions</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <link rel="stylesheet" href="~/css/listeproduitbro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>catégories des produits</h1>
+        <div class="categories">
+            <div class="category" onclick="showProducts('ondileur')">
+                <img src="~/css/onduleurs.jpg" alt="Ondileur">
+                <p>Ondileur </p>
+            </div>
+            <div class="category" onclick="showProducts('Panneaux photovoltaique')">
+                <img src="~/css/panneaux.jpg" alt="Panneaux photovoltaique">
+                <p>Panneaux photovoltaique</p>
+            </div>
+            <div class="category" onclick="showProducts('Coffrets')">
+                <img src="~/css/coffrets.jpg" alt="Coffrets">
+                <p>Coffrets</p>
+            </div>
+            <div class="category" onclick="showProducts('Lampes solaire')">
+                <img src="~/css/lampes.jpg" alt="Lampes solaire">
+                <p>Lampes solaire</p>
+            </div>
+            <div class="category" onclick="showProducts('Batteries')">
+                <img src="~/css/batteries.jfif" alt="Batteries">
+                <p>Batteries</p>
+            </div>
+            <div class="category" onclick="showProducts('Micro-Ondileur')">
+                <img src="~/css/micro.jpg" alt="Micro-Ondileur">
+                <p>Micro-Ondileur</p>
+            </div>
+        </div>
+        <div id="product-list" class="product-list"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Evo-énergy. Tous droits réservés.</p>
+    </footer>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .product-list .product-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+            .product-list .product-block .product-item {
+                width: calc(20% - 20px); /* Adjust based on desired size */
+                margin: 10px;
+                position: relative;
+                overflow: hidden;
+                
+            }
+
+                .product-list .product-block .product-item img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+
+                .product-list .product-block .product-item .product-info {
+                    padding: 10px;
+                }
+
+                .product-list .product-block .product-item .product-name, .product-description {
+                    margin: 5px 0;
+                }
+
+                .product-list .product-block .product-item .detail-button {
+                    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+                    border-radius: .5rem;
+                    box-sizing: border-box;
+                    color: #FFFFFF;
+                    display: flex;
+                    font-size: 16px;
+                    justify-content: center;
+                    padding: 1rem 1.75rem;
+                    text-decoration: none;
+                    width: 50%;
+                    border: 0;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                }
+
+        .detail-button{
+
+        {
+            background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+        }
+        }
+                    .product-list .product-block .product-item .detail-button:hover {
+                        background-color: #0056b3;
+                    }
+
+        .container {
+            max-width: 1200px;
+            margin: 120px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .category {
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+            .category img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+
+            .category p {
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .category:hover {
+                transform: scale(1.1);
+            }
+
+        .product-list {
+            display: none;
+            margin-top: 20px;
+        }
+
+            .product-list ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .product-list li {
+                background-color: #eee;
+                padding: 10px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+            }
+
+        .product-description{
+            font-weight: bold;
+        }
+
+        .product-name{
+            color:cornflowerblue;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+            footer p {
+                margin: 0;
+            }</style>
+    <script>
+        const products = {
+            ondileur: [
+
+                
+                {
+                    name: 'Onduleur Hybride 5kW',
+                    imageUrl: '/css/1.1.jfif',
+                    description: 'Un onduleur hybride qui peut gérer à la fois les sources d énergie solaire et les batteries pour une alimentation ininterrompue.',
+
+                },                
+                { 
+                  name: 'Micro-Onduleur 600W', 
+                    imageUrl: '/css/2.jpg',
+                            description: 'Un onduleur hybride qui peut gérer à la fois les sources d énergie solaire et les batteries pour une alimentation ininterrompue.',
+                },
+                { name: 'Onduleur de Réseau Triphasé 10kW', imageUrl: '/css/1.2.png',
+                        description: 'Un onduleur hybride qui peut gérer à la fois les sources d énergie solaire et les batteries pour une alimentation ininterrompue.',
+                },
+                { name: 'Onduleur Portable pour Camping', imageUrl: '/css/1.3.jpg',
+
+                        description: 'Un onduleur hybride qui peut gérer à la fois les sources d énergie solaire et les batteries pour une alimentation ininterrompue.',
+                },
+                { name: 'Onduleur à Onde Pure 2kW', imageUrl: '/css/1.5.jfif',
+                        description: 'Un onduleur hybride qui peut gérer à la fois les sources d énergie solaire et les batteries pour une alimentation ininterrompue.',
+                },
+            ],
+            Coffrets: [
+                {
+                    name: 'Coffret de protection AC ',
+                    imageUrl: '/css/2.1.jfif',
+                    description: ' Protège le système contre les surtensions électriques provenant du réseau.',
+
+                },
+                {
+                    name: 'Coffret de protection DC',
+                    imageUrl: '/css/2.2.jfif',
+                    description: 'Protège le système contre les surtensions électriques provenant des panneaux solaires.',
+                },
+                {
+                    name: 'Coffret de raccordement', imageUrl: '/css/2.3.jfif',
+                    description: 'Permet de connecter les panneaux solaires entre eux et à londuleur.',
+                },
+                {
+                    name: 'Coffret de communication', imageUrl: '/css/2.4.jfif',
+
+                    description: 'Permet de surveiller et danalyser la performance du système photovoltaïque.',
+                },
+                {
+                    name: 'Coffret de mise à la terre', imageUrl: '/css/2.6.jpg',
+                    description: 'Mesure lénergie produite par les panneaux solaires.',
+                },
+            ],
+            // Add other categories in similar fashion
+        };
+        
+        function showProducts(category) {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = `<h2>Products in ${category.replace(/([A-Z])/g, ' $1')}</h2><div class="product-block">` +
+                products[category].map(product => `
+                    <div class="product-item">
+                        <img src="${product.imageUrl}" alt="${product.name}">
+                        <div class="product-info">
+                            <p class="product-name">${product.name}</p>
+                            <p class="product-description">${product.description}</p>
+                            <button class="detail-button">Détails</button>
+                        </div>
+                    </div>
+                `).join('') + '</div>';
+            productList.style.display = 'block';
+        }</script>
+</body>
+</html>

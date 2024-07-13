@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/entrepriseregister2.css">
+    <title>Evo-energy</title>
+</head>
+<body>
+    <div id="scrollable-content">
+        <div class="wrapper">
+            <!----------------------------- Form box ----------------------------------->
+            <div class="form-box">
+                <!------------------- registration form -------------------------->
+                <div class="register2-container" id="register2">
+                    <div class="top">
+                        <header>S'inscrire Entreprise</header>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Nom d'entreprise">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <label for="profile-image">Logo d'entreprise:</label>
+                        <input type="file" id="profile-image" accept="image/*">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Email" required>
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Mot de passe" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Confirmer mot de passe" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Champ-matricule" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Siteweb-url"></label>
+                        <input type="url" class="input-field" placeholder="https://Siteweb.com">
+                    </div>
+                    <div class="input-box">
+                        <label for="facebook-url"></label>
+                        <input type="url" class="input-field" placeholder="https://www.facebook.com">
+                    </div>
+                    <div class="input-box">
+                        <label for="instagram-url"></label>
+                        <input type="url" class="input-field" placeholder="https://www.instagram.com">
+                    </div>
+                    <div class="input-box">
+                        <label for="telephone1"></label>
+                        <input type="tel" class="input-field" placeholder="Téléphone 1">
+                    </div>
+                    <div class="input-box">
+                        <label for="telephone2"></label>
+                        <input type="tel" class="input-field" placeholder="Téléphone 2">
+                    </div>
+                    <div class="input-box">
+                        <label for="Choix de Gouvernorat">Gouvernorat :</label>
+                        <select id="Choix de Gouvernorat" name="Choix de Gouvernorat" class="input-field">
+                            <option value="Bizerte">Bizerte</option>
+                            <option value="Gabés">Gabés</option>
+                            <option value="Gafsa">Gafsa</option>
+                            <option value="Jendouba">Jendouba</option>
+                            <option value="Kairouan">Kairouan</option>
+                            <option value="Kasserine">Kasserine</option>
+                            <option value="Kébili">Kébili</option>
+                            <option value="Kef">Kef</option>
+                            <option value="Mahdia">Mahdia</option>
+                            <option value="Manouba">Manouba</option>
+                            <option value="Médenine">Médenine</option>
+                            <option value="Mounastir">Mounastir</option>
+                            <option value="Nabeul">Nabeul</option>
+                            <option value="Sfax">Sfax</option>
+                            <option value="Sidi Bouzid">Sidi Bouzid</option>
+                            <option value="Siliana">Siliana</option>
+                            <option value="Sousse">Sousse</option>
+                            <option value="Tataouine">Tataouine</option>
+                            <option value="Tozeur">Tozeur</option>
+                            <option value="Tunis">Tunis</option>
+                            <option value="Zaghouan">Zaghouan</option>
+                            <option value="Ben arous">Ben arous</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Register">
+                    </div>
+                    <div class="two-col">
+                        <div class="one">
+                            <input type="checkbox" id="register-check">
+                            <label for="register-check"> Remember Me</label>
+                        </div>
+                        <div class="two">
+                           
+                            <a href="@Url.Action("termes","Home")" class="link">Terms & conditions</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Entreprise.js"></script>
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if (i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
